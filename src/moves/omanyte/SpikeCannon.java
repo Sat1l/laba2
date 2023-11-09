@@ -27,11 +27,7 @@ public class SpikeCannon extends PhysicalMove {
         }
 
     }
-    @Override
-    protected void applyOppEffects(Pokemon p){
-        super.applyOppEffects(p);
 
-    }
 
     @Override
     protected String describe(){

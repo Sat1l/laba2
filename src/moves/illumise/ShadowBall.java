@@ -1,6 +1,6 @@
 package moves.illumise;
 
-import laba2.Main;
+
 import ru.ifmo.se.pokemon.Effect;
 import ru.ifmo.se.pokemon.SpecialMove;
 import ru.ifmo.se.pokemon.Stat;
