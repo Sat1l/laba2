@@ -1,22 +1,22 @@
-package moves.illumise;
+package moves.omanyte;
 
-import laba2.Main;
 import ru.ifmo.se.pokemon.Effect;
-import ru.ifmo.se.pokemon.SpecialMove;
-import ru.ifmo.se.pokemon.Stat;
+import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.Type;
 import ru.ifmo.se.pokemon.Pokemon;
+import laba2.Main;
 
-public class ShadowBall extends SpecialMove {
-    public ShadowBall(double pow, double acc) {
-        super(Type.GHOST, pow, acc);
+public class Waterfall extends PhysicalMove {
+    public Waterfall(double pow, double acc) {
+        super(Type.NORMAL, pow, acc);
     }
 
     @Override
     protected void applyOppEffects(Pokemon p){
         super.applyOppEffects(p);
-            Effect e = new Effect().chance(0.2).stat(Stat.SPECIAL_DEFENSE, -1);
-            p.addEffect(e);
+        if(Main.chance(0.2)) {
+            Effect.flinch(p);
+        }
     }
 
     @Override

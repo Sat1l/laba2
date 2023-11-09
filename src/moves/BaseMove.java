@@ -1,6 +1,5 @@
 package moves;
 
-import laba2.Main;
 import ru.ifmo.se.pokemon.*;
 
 public class BaseMove extends PhysicalMove {

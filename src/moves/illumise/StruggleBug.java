@@ -11,6 +11,7 @@ public class StruggleBug extends SpecialMove{
     protected void applyOppEffects(Pokemon p){
         super.applyOppEffects(p);
         Effect e = new Effect().stat(Stat.SPECIAL_ATTACK, -1);
+        p.addEffect(e);
     }
 
     @Override

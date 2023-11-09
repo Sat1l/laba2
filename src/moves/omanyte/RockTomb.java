@@ -1,22 +1,21 @@
-package moves.illumise;
+package moves.omanyte;
 
-import laba2.Main;
 import ru.ifmo.se.pokemon.Effect;
-import ru.ifmo.se.pokemon.SpecialMove;
-import ru.ifmo.se.pokemon.Stat;
+import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.Type;
 import ru.ifmo.se.pokemon.Pokemon;
+import ru.ifmo.se.pokemon.Stat;
 
-public class ShadowBall extends SpecialMove {
-    public ShadowBall(double pow, double acc) {
-        super(Type.GHOST, pow, acc);
+public class RockTomb extends PhysicalMove {
+    public RockTomb(double pow, double acc) {
+        super(Type.ROCK, pow, acc);
     }
 
     @Override
     protected void applyOppEffects(Pokemon p){
         super.applyOppEffects(p);
-            Effect e = new Effect().chance(0.2).stat(Stat.SPECIAL_DEFENSE, -1);
-            p.addEffect(e);
+        Effect e = new Effect().stat(Stat.SPEED, -1);
+        p.addEffect(e);
     }
 
     @Override
@@ -24,4 +23,6 @@ public class ShadowBall extends SpecialMove {
         String[] pieces = this.getClass().toString().split("\\.");
         return "does " + pieces[pieces.length-1];
     }
+
+
 }

@@ -1,22 +1,21 @@
-package moves.illumise;
+package moves.omanyte;
 
-import laba2.Main;
 import ru.ifmo.se.pokemon.Effect;
-import ru.ifmo.se.pokemon.SpecialMove;
-import ru.ifmo.se.pokemon.Stat;
+import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.Type;
 import ru.ifmo.se.pokemon.Pokemon;
+import ru.ifmo.se.pokemon.Status;
 
-public class ShadowBall extends SpecialMove {
-    public ShadowBall(double pow, double acc) {
-        super(Type.GHOST, pow, acc);
+public class IceBeam extends PhysicalMove {
+    public IceBeam(double pow, double acc) {
+        super(Type.ICE, pow, acc);
     }
 
     @Override
     protected void applyOppEffects(Pokemon p){
         super.applyOppEffects(p);
-            Effect e = new Effect().chance(0.2).stat(Stat.SPECIAL_DEFENSE, -1);
-            p.addEffect(e);
+        Effect e = new Effect().chance(0.1).condition(Status.FREEZE);
+        p.addEffect(e);
     }
 
     @Override

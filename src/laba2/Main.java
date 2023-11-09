@@ -13,9 +13,9 @@ public class Main {
     // https://pokemondb.net/pokedex/togekiss
     public static void main(String[] args) {
         Battle b = new Battle();
-        Pokemon p1 = new Pokemon("Чужой", 1);
+        Omanyte omanyte = new Omanyte("rakushka", 1);
         Illumise illumise = new Illumise("thing",1);
-        b.addAlly(p1);
+        b.addAlly(omanyte);
         b.addFoe(illumise);
         b.go();
     }
